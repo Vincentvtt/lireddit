@@ -1,0 +1,59 @@
+{
+  "name": "lireddit",
+  "version": "1.0.0",
+  "description": "Project to learn fullstack development involving:\r - React\r - TypeScript\r - GraphQL\r - Apollo\r - Node.js\r - PostgreSQL\r - TypeORM\r - Redis\r - Next.js\r - TypeGraphQL\r - Chakra",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc -w",
+    "dev": "nodemon dist/index.js",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create:migration": "mikro-orm migration:create"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vincentvtt/lireddit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vincentvtt/lireddit/issues"
+  },
+  "homepage": "https://github.com/Vincentvtt/lireddit#readme",
+  "dependencies": {
+    "@mikro-orm/core": "^4.5.9",
+    "@mikro-orm/migrations": "^4.5.9",
+    "@mikro-orm/postgresql": "^4.5.9",
+    "@types/connect-redis": "0.0.17",
+    "@types/express-session": "^1.17.4",
+    "@types/redis": "^2.8.32",
+    "apollo-server-core": "^3.4.0",
+    "apollo-server-express": "^3.4.0",
+    "argon2": "^0.28.2",
+    "class-validator": "^0.13.1",
+    "connect-redis": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "graphql": "^15.6.1",
+    "redis": "^3.1.2",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.11.1",
+    "nodemon": "^2.0.13",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  },
+  "mikro-orm": {
+    "useTsNode": false,
+    "configPaths": [
+      "./src/mikro-orm.config.ts",
+      "./dist/mikro-orm.config.js"
+    ]
+  }
+}
