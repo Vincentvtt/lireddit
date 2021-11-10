@@ -7,13 +7,17 @@ import NextLink from "next/link";
 import { Link } from "@chakra-ui/layout";
 
 const Index = () => {
-  const [{ data }] = usePostsQuery();
+  const [{ data }] = usePostsQuery({
+    variables: {
+      limit: 10,
+    },
+  });
   return (
     <Layout>
       <NextLink href="/create-post">
         <Link>create post</Link>
       </NextLink>
-      <br/>
+      <br />
       {!data ? (
         <div>loading...</div>
       ) : (
